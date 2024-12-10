@@ -14,21 +14,9 @@ namespace footgolf
 
         public string Csapat { get; set; }
 
-        public int pont1 { get; set; }
+        public int[] pontok { get; set; }
 
-        public int pont2 { get; set; }
 
-        public int pont3 { get; set; }
-
-        public int pont4 { get; set; }
-
-        public int pont5 { get; set; }
-
-        public int pont6 { get; set; }
-
-        public int pont7 { get; set; }
-
-        public int pont8 { get; set; }
 
 
         public Versenyzo(string sor)
@@ -41,21 +29,16 @@ namespace footgolf
 
             Csapat = s[2];
 
-            pont1 = int.Parse(s[3]);
 
-            pont2 = int.Parse(s[4]);
 
-            pont3 = int.Parse(s[5]);
+            pontok = new int[8];
 
-            pont4 = int.Parse(s[6]);
+            for (int i = 0; i < pontok.Length; i++)
+            {
+                pontok[i] = int.Parse(s[i + 3]);
+            }
 
-            pont5 = int.Parse(s[7]);
-
-            pont6 = int.Parse(s[8]);
-
-            pont7 = int.Parse(s[9]);
-
-            pont8 = int.Parse(s[10]);
+      
 
         }
 

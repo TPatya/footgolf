@@ -21,7 +21,7 @@
                     nok++;
                 }
             }
-            Console.WriteLine($"4.Feladat: \t A női versenyzők aránya: {versenyzok.Count() / nok:0.0.0} %");
+            Console.WriteLine($"4.Feladat: \t A női versenyzők aránya: {nok /(double)versenyzok.Count() *100:0.0.0} %");
             
         }
     }
